@@ -1,0 +1,41 @@
+{
+  "_note": "합성 예시다(이름·번호 모두 가짜). 팀원이 받은 실제 승인 문자/앱 푸시를 이름·전체 카드번호를 가린 뒤 같은 형태로 추가하고, expect를 채워 파서 회귀 테스트로 쓴다. source는 문자앱/카드사앱 구분.",
+  "samples": [
+    {
+      "id": "kb-check-multiline",
+      "source": "sms",
+      "text": "[Web발신]\nKB국민체크(9421)\n홍*동님\n10/16 12:30\n13,000원\n스타벅스영남대정 사용",
+      "expect": { "type": "approve", "issuer": "kb", "last4": "9421", "amount": 13000, "merchantRaw": "스타벅스영남대정" }
+    },
+    {
+      "id": "sh-credit-oneline",
+      "source": "sms",
+      "text": "[Web발신]\n신한카드(1083)승인 홍*동 6,500원(일시불)10/16 22:41 GS25영남대정문 누적268,000원",
+      "expect": { "type": "approve", "issuer": "sh", "last4": "1083", "amount": 6500, "merchantRaw": "GS25영남대정문", "installment": "일시불", "cumulative": 268000 }
+    },
+    {
+      "id": "sh-credit-cancel",
+      "source": "sms",
+      "text": "[Web발신]\n신한카드(1083)취소 홍*동 6,500원 10/16 22:43 GS25영남대정문",
+      "expect": { "type": "cancel", "issuer": "sh", "last4": "1083", "amount": 6500, "merchantRaw": "GS25영남대정문" }
+    },
+    {
+      "id": "hd-no-last4",
+      "source": "sms",
+      "text": "[현대카드]승인\n홍*동\n13,000원 일시불\n10/16 12:30\n스타벅스영남대정\n누적350,000원",
+      "expect": { "type": "approve", "issuer": "hd", "last4": null, "amount": 13000, "merchantRaw": "스타벅스영남대정", "cumulative": 350000 }
+    },
+    {
+      "id": "hd-app-push",
+      "source": "app",
+      "text": "현대카드 승인 74,000원 일시불 10/16 19:44 빕스동대구역점",
+      "expect": { "type": "approve", "issuer": "hd", "last4": null, "amount": 74000, "merchantRaw": "빕스동대구역점" }
+    },
+    {
+      "id": "not-card",
+      "source": "sms",
+      "text": "[Web발신]\n[CJ대한통운] 고객님의 상품이 10/16 배송 완료되었습니다.",
+      "expect": null
+    }
+  ]
+}

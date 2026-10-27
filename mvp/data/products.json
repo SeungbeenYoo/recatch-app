@@ -1,0 +1,215 @@
+{
+  "_note": "모든 값은 웹 시연(index.html, DEMO_SCALE 적용 전)과 맞춘 예시다. 카드 약관·통신사 혜택표를 확인한 항목만 verified=true와 source를 채운다. rate는 퍼센트.",
+  "cards": [
+    {
+      "id": "kb-toktokd-check",
+      "issuer": "kb",
+      "name": "KB국민 톡톡D 체크",
+      "kind": "check",
+      "prevMonthMin": 300000,
+      "verified": false,
+      "source": null,
+      "benefits": [
+        {
+          "id": "kb-tt-starbucks",
+          "label": "스타벅스 20% 캐시백",
+          "type": "cashback",
+          "rate": 20,
+          "match": {
+            "brands": [
+              "스타벅스"
+            ]
+          },
+          "monthlyCap": 10000
+        },
+        {
+          "id": "kb-tt-cgv",
+          "label": "CGV 20% 캐시백",
+          "type": "cashback",
+          "rate": 20,
+          "match": {
+            "brands": [
+              "CGV"
+            ]
+          },
+          "monthlyCap": 10000
+        }
+      ]
+    },
+    {
+      "id": "sh-mrlife",
+      "issuer": "sh",
+      "name": "신한 Mr.Life 신용",
+      "kind": "credit",
+      "prevMonthMin": 300000,
+      "verified": false,
+      "source": null,
+      "benefits": [
+        {
+          "id": "sh-ml-cvs",
+          "label": "편의점 10% 청구할인",
+          "type": "discount",
+          "rate": 10,
+          "match": {
+            "categories": [
+              "cvs"
+            ]
+          },
+          "monthlyCap": 10000
+        },
+        {
+          "id": "sh-ml-night",
+          "label": "편의점 심야 추가 할인(예시)",
+          "type": "discount",
+          "rate": 15,
+          "match": {
+            "categories": [
+              "cvs"
+            ]
+          },
+          "timeRange": [
+            "22:00",
+            "06:00"
+          ],
+          "monthlyCap": 5000
+        }
+      ]
+    },
+    {
+      "id": "hd-zero2",
+      "issuer": "hd",
+      "name": "현대 ZERO Edition2",
+      "kind": "credit",
+      "prevMonthMin": 0,
+      "verified": false,
+      "source": null,
+      "benefits": [
+        {
+          "id": "hd-zero-all",
+          "label": "전 가맹점 0.7% 청구할인",
+          "type": "discount",
+          "rate": 0.7,
+          "match": {
+            "all": true
+          }
+        }
+      ]
+    }
+  ],
+  "memberships": [
+    {
+      "id": "skt-tmembership",
+      "name": "SKT T멤버십",
+      "kind": "telecom",
+      "verified": false,
+      "source": null,
+      "tiers": {
+        "VIP": {
+          "benefits": [
+            {
+              "id": "skt-vip-vips",
+              "label": "빕스 15% 현장할인",
+              "type": "discount",
+              "rate": 15,
+              "match": {
+                "brands": [
+                  "빕스"
+                ]
+              }
+            },
+            {
+              "id": "skt-vip-moms",
+              "label": "맘스터치 20% 현장할인",
+              "type": "discount",
+              "rate": 20,
+              "match": {
+                "brands": [
+                  "맘스터치"
+                ]
+              }
+            },
+            {
+              "id": "skt-vip-pb",
+              "label": "파리바게뜨 10% 현장할인",
+              "type": "discount",
+              "rate": 10,
+              "match": {
+                "brands": [
+                  "파리바게뜨"
+                ]
+              }
+            }
+          ]
+        },
+        "GOLD": {
+          "benefits": [
+            {
+              "id": "skt-gold-vips",
+              "label": "빕스 10% 현장할인",
+              "type": "discount",
+              "rate": 10,
+              "match": {
+                "brands": [
+                  "빕스"
+                ]
+              }
+            },
+            {
+              "id": "skt-gold-pb",
+              "label": "파리바게뜨 5% 현장할인",
+              "type": "discount",
+              "rate": 5,
+              "match": {
+                "brands": [
+                  "파리바게뜨"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cj-one",
+      "name": "CJ ONE",
+      "kind": "membership",
+      "verified": false,
+      "source": null,
+      "benefits": [
+        {
+          "id": "cj-oy",
+          "label": "올리브영 적립",
+          "type": "points",
+          "rate": 10,
+          "pointValue": 1,
+          "match": {
+            "brands": [
+              "올리브영"
+            ]
+          }
+        },
+        {
+          "id": "cj-cgv",
+          "label": "CGV 적립",
+          "type": "points",
+          "rate": 5,
+          "pointValue": 1,
+          "match": {
+            "brands": [
+              "CGV"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "yu-student",
+      "name": "영남대 모바일 학생증",
+      "kind": "student",
+      "verified": false,
+      "source": null,
+      "_note": "대학가 제휴 가맹점 목록이 확인되면 혜택을 채운다.",
+      "benefits": []
+    }
+  ]
+}

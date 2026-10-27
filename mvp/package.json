@@ -1,0 +1,14 @@
+{
+  "name": "recatch-mvp-core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ReCatch MVP 코어: 승인 알림 파싱, 혜택 룰 엔진, 재결제 판정, 성과 수수료 정산 (의존성 없음)",
+  "type": "module",
+  "main": "core/index.js",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test \"tests/*.test.js\"",
+    "demo": "node cli/demo.js",
+    "start": "node server/server.js"
+  }
+}

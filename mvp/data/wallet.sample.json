@@ -1,0 +1,55 @@
+{
+  "_note": "시연용 사용자 지갑. prevMonthSpend=전월 실적, monthSpend=이번 달 누적, usage=혜택별 이번 달 사용액. MVP에서는 사용자가 직접 입력하고, STEP 3에서 마이데이터로 자동 조회한다.",
+  "cards": [
+    {
+      "issuer": "kb",
+      "productId": "kb-toktokd-check",
+      "last4": "9421",
+      "prevMonthSpend": 412000,
+      "monthSpend": 280000,
+      "usage": {}
+    },
+    {
+      "issuer": "sh",
+      "productId": "sh-mrlife",
+      "last4": "1083",
+      "prevMonthSpend": 268000,
+      "monthSpend": 120000,
+      "usage": {}
+    },
+    {
+      "issuer": "hd",
+      "productId": "hd-zero2",
+      "last4": "5530",
+      "prevMonthSpend": 510000,
+      "monthSpend": 350000,
+      "usage": {}
+    }
+  ],
+  "memberships": [
+    {
+      "productId": "skt-tmembership",
+      "tier": "VIP",
+      "usage": {},
+      "code": "7700192388321049",
+      "format": "member16"
+    },
+    {
+      "productId": "cj-one",
+      "usage": {},
+      "code": "8806441022750193",
+      "format": "member16"
+    },
+    {
+      "productId": "yu-student",
+      "usage": {},
+      "code": "261104205578",
+      "format": "student12"
+    }
+  ],
+  "profile": {
+    "student": "대학생",
+    "region": "경산시",
+    "age": "20대"
+  }
+}
